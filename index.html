@@ -20,38 +20,31 @@
         <!-- content -->
         <div class="content">
             <div class="left">
-                <div class="card">
+                <ul class="tabs">
+                    <li class="active" data-cont=".user">username</li>
+                    <li class="" data-cont=".language">language</li>
+                </ul>
+                <div class="card1 user">
                     <h2>git repo with username</h2>
                     <form action="" id="userform">
                         <label for="username">username</label>
                         <input type="text" id="username">
                         <button type="submit" class="btn">search</button>
                     </form>
-                </div>
-                <div class="card">
+                </div> 
+                <div class="card2 language">
                     <h2>git repo with language</h2>
-                    <div class="langs">
-                        <select form="languageForm">
-                            <!-- <option value="" data-lng=""></option> -->
-                            <option value="" data-lng="javascript">javaScript</option>
-                            <option value="" data-lng="python">python</option>
-                            <option value="" data-lng="php">php</option>
-                            <option value="" data-lng="java">java</option>
-                        </select>
-                    </div>
-                    <form action="">
-                        <input type="text" name="" id="lang" placeholder="language">
+                    <form action="" id="langform" >
+                        <label for="language">language</label>
+                        <input type="text" name="" id="lang" >
                         <button type="submit" class="btn">search</button>
                     </form>
                 </div>
             </div>
             <div class="right">
-                <p class="search-term">HTML</p>
+                <p class="search-term"></p>
                 <div class="repos">
-                    <a href="" class="repo-item">
-                        <span>reponName</span>
-                        <span>num issuse</span>
-                    </a>
+                    
                 </div>
             </div>
         </div>

@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'IBM Plex Sans', sans-serif;
-    text-transform: capitalize  ;
+    text-transform: capitalize;
 }
 
 :root {
@@ -22,35 +22,64 @@
 .content {
     padding: 30px 60px;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.left {
-    width: 40%;
-
+.tabs {
+    display: flex;
+    list-style: none;
 }
 
-.right {
+.tabs li {
+    padding: 10px;
+    /* background-color: var(--bgcolor); */
+    color: var(--bgcolor);
+    border-right: 1px solid white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.tabs li.active{
+    background-color: var(--bgcolor);
+    color: var(--textcolor);
+    font-weight: bold;
+}
+.left> div:nth-child(3) {
+    display: none;
+}
+
+/*.right {
     width: 60%;
-}
-.card{
+} */
+.card1,.card2 {
     width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     border: 1px solid var(--bgcolor);
     margin-bottom: 20px;
 }
-.card h2{
+
+/* .card2{
+    display: none;
+} */
+.card h2 {
     /* color: var(); */
     text-align: center;
     font-size: 25px;
 }
-form,.langs{
+
+form {
     padding: 15px;
 }
-label{
+
+label {
     font-size: 16px;
     display: block;
 }
-input{
+
+input {
     width: 90%;
     padding: 5px;
     margin: 7px 0;
@@ -59,18 +88,21 @@ input{
     border: 1px solid var(--bgcolor);
     border-radius: 5px;
 }
-.langs{
+
+.langs {
     margin-bottom: -20px;
 }
-select{
+
+select {
     width: 90%;
     padding: 5px;
     outline: none;
     font-size: 15px;
     border: 1px solid var(--bgcolor);
-    border-radius: 5px;}
+    border-radius: 5px;
+}
 
-.btn{
+.btn {
     cursor: pointer;
     width: 90%;
     background-color: var(--bgcolor);
@@ -78,20 +110,32 @@ select{
     font-size: 20px;
     border-radius: 5px;
 }
-.btn:hover{
+
+.btn:hover {
     color: black;
     background-color: var(--textcolor);
 }
-.repo-item{
+
+.repo-item {
     display: flex;
-    justify-content: space-between ;
+    justify-content: space-between;
     background-color: var(--bgcolor);
     color: var(--textcolor);
     padding: 10px 15px;
-    border-radius: 5px ;
+    border-radius: 5px;
     margin: 5px 0;
     text-decoration: none;
 }
-.repo-item:hover{
+
+.search-term {
+    font-weight: bold;
+}
+
+.repo-item:hover {
     background-color: #101026;
+}
+
+.repolink {
+    color: #fff;
+    text-decoration: none;
 }
